@@ -21,14 +21,15 @@ const blink = keyframes`
 const StyledLink = styled(Link)`
   display: flex;
   align-items: center;
+  color: ${({ theme }) => theme.colors.text};
   .mobile-icon {
-    width: 32px;
+    width: 50px;
     ${({ theme }) => theme.mediaQueries.nav} {
       display: none;
     }
   }
   .desktop-icon {
-    width: 160px;
+    width: 50px;
     display: none;
     ${({ theme }) => theme.mediaQueries.nav} {
       display: block;
@@ -67,11 +68,11 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
         )}
       </MenuButton>
       {isAbsoluteUrl ? (
-        <StyledLink as="a" href={href} aria-label="Pancake home page">
+        <StyledLink as="a" href={href} aria-label="Bafswap home page">
           {innerLogo}
         </StyledLink>
       ) : (
-        <StyledLink to={href} aria-label="Pancake home page">
+        <StyledLink to={href} aria-label="Bafswap home page">
           {innerLogo}
         </StyledLink>
       )}
